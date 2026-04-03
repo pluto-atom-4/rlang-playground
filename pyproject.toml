@@ -1,0 +1,58 @@
+[project]
+name = "rlang-playground"
+version = "0.1.0"
+description = "Local analysis environment for cbrATLAS R package - mark-recapture survival analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+# Empty dependencies - all managed through dependency-groups below
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1.0",
+    "black>=23.0",
+    "mypy>=1.0",
+]
+mcp = [
+    "mcp-server-sqlite>=0.2.0",
+]
+analysis = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v --cov=. --cov-report=term-missing"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "W", "I"]  # Errors, Pyflakes, Warnings, Import sorting
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false  # Start permissive, tighten over time
+
+[tool.coverage.run]
+branch = true
+source = ["."]
+omit = [
+    "*/tests/*",
+    "*/.venv/*",
+    "*/site-packages/*",
+]
