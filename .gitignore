@@ -1,0 +1,52 @@
+# R environment
+.Rhistory
+.RData
+.Rproj.user
+.Renviron.local
+.Rprofile.user
+
+# renv
+renv/library/
+renv/staging/
+renv/sandbox/
+
+# Generated/large outputs
+results/analysis_results.db
+results/figures/*.png
+results/figures/*.pdf
+results/*.html
+
+# IDE & editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.Python
+env/
+venv/
+
+# uv virtual environment (DO NOT IGNORE uv.lock - needed for reproducibility)
+.venv/
+
+# pytest & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+*.tmp
+*.bak
+.~*
+
+# OS-specific
+Thumbs.db

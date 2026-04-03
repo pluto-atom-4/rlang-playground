@@ -1,0 +1,17 @@
+# Standard R project files to exclude from package builds
+^\.github$
+^\.idea$
+^\.Rproj\.user$
+^.*\.Rproj$
+^\.windsurfrules$
+^\.cursorrules$
+^\.clinerules$
+^CLAUDE\.md$
+^about-me\.md$
+^plan\.md$
+^\.claude$
+^\.copilot$
+^results/
+^data-raw/
+^tests/
+^\.gitignore$
